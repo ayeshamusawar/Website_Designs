@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Slider Image</title>
+    <link rel="stylesheet" href="css/mystyle.css">
+</head>
+<body onload="slider()">
+    <div class="banner">
+        <div class="slider">
+            <img src="images/bg-img.jpg" >
+        </div>
+        <div class="overlay">
+            <div class="navbar">
+                <div class="logo">
+                    <img src="images/logo.png">
+                </div>
+                <div class="menu-icons">
+                    <img src="images/user.png" style="width: 4rem; height: 4rem;">
+                    <img src="images/cart.png" style="width: 4rem; height: 4rem;">
+                    <img src="images/menu.png" style="width: 4rem; height: 4rem;">
+                </div>
+            </div>
+            <div class="content">
+                <h1>LET'S START TO DESIGN</h1>
+                <p style="font-size: 1.5rem;">Subcribe Easy Tutorials Youtube channel to watch more videos,<br> press the bell icons to grt lastest updates</p>
+                <div>
+                    <button type="button">WATCH MORE</button>
+                    <button type="button" class="btn-2">SUBSCRIBE</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+    <script type="text/javascript">
+        var slideImg = document.getElementById("slideImg");
+
+        var images = new Array(
+            "img1.jpg",
+            "img2.jpg",
+            "img3.jpg",
+            "img4.jpg"
+        );
+        var len = images.length;
+        var i = 0;
+
+        function slider(){
+            if(i > len-1){
+                i = 0;
+            }
+            slideImg.src = images[i];
+            i++;
+            setTimeout('slide()',300);
+
+        }
+    </script>
+    
+</body>
+</html>
